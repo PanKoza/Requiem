@@ -1,0 +1,90 @@
+.footer {
+  background: var(--dark2);
+  border-top: 1px solid rgba(201,168,76,0.2);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+}
+
+.sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+  transition: color 0.2s;
+}
+
+.links a:hover { color: var(--gold); }
+
+.phones {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.phones a {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.phones a:hover { color: var(--gold-light); }
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.bottom p {
+  font-size: 0.78rem;
+  color: rgba(136,136,136,0.6);
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+}
+
+.seoText {
+  font-size: 0.72rem !important;
+  color: rgba(136,136,136,0.35) !important;
+}
+
+@media (max-width: 700px) {
+  .inner { flex-direction: column; align-items: flex-start; }
+  .phones { text-align: left; }
+}

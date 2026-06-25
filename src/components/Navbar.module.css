@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+}
+
+.header.scrolled {
+  background: rgba(10, 10, 10, 0.97);
+  padding: 12px 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.8);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoText {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+}
+
+.logoSub {
+  font-size: 0.65rem;
+  color: var(--gray);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--light);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+
+.navLink:hover {
+  color: var(--gold);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navPhone {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.navPhone:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--gold);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.burgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; }
+.burgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .burger { display: flex; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10,10,10,0.98);
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .nav.navOpen { display: flex; }
+
+  .navLink, .navPhone {
+    width: 100%;
+    padding: 18px 24px;
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .navPhone {
+    font-size: 1rem;
+    background: rgba(201,168,76,0.1);
+  }
+}

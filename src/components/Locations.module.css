@@ -1,0 +1,71 @@
+.section {
+  padding: 96px 0;
+  background: var(--dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--dark3);
+  border: 1px solid rgba(201,168,76,0.15);
+  padding: 36px 28px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.pin { font-size: 1.3rem; }
+
+.city {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.address {
+  font-size: 0.92rem;
+  color: var(--gray);
+  margin-bottom: 24px;
+  padding-left: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mapLink {
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.mapLink:hover { color: var(--gold-light); }
+
+.phoneLink {
+  font-size: 0.8rem;
+  background: rgba(201,168,76,0.12);
+  color: var(--gold);
+  padding: 4px 14px;
+  border: 1px solid rgba(201,168,76,0.3);
+  transition: background 0.2s;
+}
+
+.phoneLink:hover { background: rgba(201,168,76,0.25); }

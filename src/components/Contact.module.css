@@ -1,0 +1,171 @@
+.section {
+  padding: 96px 0;
+  background: var(--black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.highlight {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 16px 20px;
+  margin-bottom: 32px;
+}
+
+.available {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.phones {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--dark2);
+  border: 1px solid rgba(201,168,76,0.15);
+  transition: border-color 0.2s;
+}
+
+.phone:hover {
+  border-color: var(--gold);
+}
+
+.phone div {
+  display: flex;
+  flex-direction: column;
+}
+
+.phoneIcon { font-size: 1.4rem; }
+
+.phoneLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.phoneNumber {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+.addressTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.addressList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.addressList li {
+  font-size: 0.92rem;
+  color: var(--gray);
+  padding-left: 16px;
+  border-left: 2px solid rgba(201,168,76,0.3);
+}
+
+.addressList strong {
+  color: var(--light);
+}
+
+.nip {
+  font-size: 0.78rem;
+  color: rgba(136,136,136,0.5);
+  letter-spacing: 0.1em;
+}
+
+.ctaBlock {
+  position: sticky;
+  top: 100px;
+}
+
+.ctaBox {
+  background: var(--dark2);
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 48px 36px;
+  text-align: center;
+}
+
+.ctaEyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+.ctaTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.ctaDesc {
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.ctaBtn {
+  display: block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover { background: var(--gold-light); }
+
+.ctaBtnSecond {
+  display: block;
+  border: 1px solid rgba(201,168,76,0.4);
+  color: var(--gold);
+  padding: 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.ctaBtnSecond:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+  .ctaBlock { position: static; }
+}

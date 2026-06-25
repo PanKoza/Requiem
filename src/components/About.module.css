@@ -1,0 +1,119 @@
+.section {
+  padding: 96px 0;
+  background: var(--black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 400;
+  color: var(--light);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.title span {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-bottom: 28px;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--light);
+  margin-bottom: 16px;
+  line-height: 1.75;
+}
+
+.text {
+  font-size: 0.92rem;
+  color: var(--gray);
+  margin-bottom: 16px;
+  line-height: 1.75;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--gold);
+  color: var(--black);
+  padding: 13px 32px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--gold-light);
+}
+
+.statsBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.stat {
+  background: var(--dark2);
+  padding: 48px 24px;
+  text-align: center;
+  border: 1px solid rgba(201,168,76,0.1);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.stat:hover {
+  border-color: rgba(201,168,76,0.5);
+  box-shadow: 0 0 32px rgba(201,168,76,0.12), inset 0 0 24px rgba(201,168,76,0.04);
+  transform: scale(1.03);
+}
+
+.statValue {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  color: var(--gold);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 480px) {
+  .statsBlock { grid-template-columns: 1fr 1fr; }
+  .stat { padding: 32px 16px; }
+  .statValue { font-size: 2rem; }
+}
