@@ -26,6 +26,12 @@ const locations = [
     keyword: 'zakład pogrzebowy Szczytna',
     mapQuery: 'ul.+Kościelna+4,+Szczytna',
   },
+  {
+    city: 'Piława Górna',
+    address: 'ul. Piastowska 50A',
+    keyword: 'zakład pogrzebowy Piława Górna',
+    mapQuery: 'ul.+Piastowska+50A,+Piława+Górna',
+  }
 ]
 
 export default function Locations() {
