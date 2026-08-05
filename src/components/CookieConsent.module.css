@@ -1,0 +1,77 @@
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.popup {
+  background-color: var(--dark2);
+  border: 1px solid var(--gold-dark);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  color: var(--light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.accept,
+.reject {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.accept {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.reject {
+  background-color: transparent;
+  border: 1px solid var(--gray);
+  color: var(--gray);
+}
+
+.accept:hover,
+.reject:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .popup {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}

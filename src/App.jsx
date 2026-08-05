@@ -5,10 +5,12 @@ import About from './components/About'
 import Locations from './components/Locations'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CookieConsent from './components/CookieConsent'
 
 function App() {
   return (
     <>
+      <CookieConsent />
       <Navbar />
       <main>
         <Hero />
